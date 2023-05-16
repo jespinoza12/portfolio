@@ -1,0 +1,43 @@
+{
+  "api": {
+    "PortfolioAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "portfolio56025c44"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "portfolio56025c44": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_portfolio56025c44_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "portfolio56025c44"
+        }
+      ]
+    },
+    "AMPLIFY_function_portfolio56025c44_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "portfolio56025c44"
+        }
+      ]
+    }
+  }
+}
