@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/bruh": {
+      "name": "/bruh",
+      "lambdaFunction": "portfolio56025c44",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

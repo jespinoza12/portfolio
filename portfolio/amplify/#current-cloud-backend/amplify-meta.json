@@ -1,0 +1,70 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify1581752ca0fd4-staging-41213-authRole",
+      "UnauthRoleArn": "arn:aws:iam::715609144461:role/amplify-amplify1581752ca0fd4-staging-41213-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::715609144461:role/amplify-amplify1581752ca0fd4-staging-41213-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-amplify1581752ca0fd4-staging-41213-deployment",
+      "UnauthRoleName": "amplify-amplify1581752ca0fd4-staging-41213-unauthRole",
+      "StackName": "amplify-amplify1581752ca0fd4-staging-41213",
+      "StackId": "arn:aws:cloudformation:us-west-2:715609144461:stack/amplify-amplify1581752ca0fd4-staging-41213/d60efed0-f39f-11ed-844c-027bb9c1fb7d",
+      "AmplifyAppId": "d38a87k4d68kem"
+    }
+  },
+  "function": {
+    "portfolio56025c44": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-05-16T04:52:43.911Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-05-16T04:53:33.614Z",
+      "distZipFilename": "portfolio56025c44-3074795875524d417563-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-amplify1581752ca0fd4-staging-41213-deployment",
+        "s3Key": "amplify-builds/portfolio56025c44-3074795875524d417563-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify1581752ca0fd4-staging-41213-deployment/amplify-cfn-templates/function/portfolio56025c44-cloudformation-template.json",
+        "logicalId": "functionportfolio56025c44"
+      },
+      "lastPushTimeStamp": "2023-05-16T04:54:44.703Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::715609144461:role/portfolioLambdaRole1764ec3c-staging",
+        "Region": "us-west-2",
+        "Arn": "arn:aws:lambda:us-west-2:715609144461:function:portfolio56025c44-staging",
+        "Name": "portfolio56025c44-staging",
+        "LambdaExecutionRole": "portfolioLambdaRole1764ec3c-staging"
+      },
+      "lastPushDirHash": "C9IaqJN2Fj5MFKewvE+z89wUQn8="
+    }
+  },
+  "api": {
+    "PortfolioAPI": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "portfolio56025c44",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplify1581752ca0fd4-staging-41213-deployment/amplify-cfn-templates/api/PortfolioAPI-cloudformation-template.json",
+        "logicalId": "apiPortfolioAPI"
+      },
+      "lastPushTimeStamp": "2023-05-16T04:54:44.424Z",
+      "output": {
+        "ApiName": "PortfolioAPI",
+        "RootUrl": "https://hds5hcel0g.execute-api.us-west-2.amazonaws.com/staging",
+        "ApiId": "hds5hcel0g"
+      },
+      "lastPushDirHash": "t4A59v99qnBhYWJCFiU5yLCGrLs="
+    }
+  }
+}
