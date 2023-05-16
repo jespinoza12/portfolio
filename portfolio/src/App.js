@@ -7,16 +7,25 @@ import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import ErrorPage from './assets/Error-page';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Banner />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+
+      <Router>
+        <Switch>
+          <Route exact path="/" fallback={<ErrorPage />}>
+            <NavBar />
+            <Banner />
+            <Skills />
+            <Projects />
+            <Contact />
+            <Footer />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
