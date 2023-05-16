@@ -2,6 +2,9 @@
   "name": "personal-portfolio",
   "homepage": "https://main.d38a87k4d68kem.amplifyapp.com/",
   "version": "0.1.0",
+  "engines": {
+    "node": "16.x"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
