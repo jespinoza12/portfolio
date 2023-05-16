@@ -26,7 +26,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("https://hds5hcel0g.execute-api.us-west-2.amazonaws.com/staging/contact", {
+    let response = await fetch("https://1rymozyaj2.execute-api.us-west-2.amazonaws.com/staging/portfolio/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
